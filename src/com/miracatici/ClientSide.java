@@ -16,6 +16,7 @@ public class ClientSide {
 		String message, line = "";
 		try {
 			client = new Socket("178.62.193.160",8890);
+			client.connect(null);
 			input = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			output = new PrintStream(client.getOutputStream());
 			userInput = new BufferedReader(new InputStreamReader(System.in));
